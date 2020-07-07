@@ -20,9 +20,9 @@ import Order from './Order';
 export default class ProductKey extends BaseModel {
 
     static association() {
-        ProductKey.belongsTo(ProductPackage, { as: 'productpackage', foreignKey: 'package_id'})
-        ProductKey.belongsTo(Product, { as: 'product', foreignKey: 'product_id'})
-        ProductKey.belongsTo(Order, { as: 'order', foreignKey: 'order_id'})
+        //ProductKey.belongsTo(ProductPackage, { as: 'productpackage', foreignKey: 'package_id'})
+        //ProductKey.belongsTo(Product, { as: 'product', foreignKey: 'product_id'})
+        //ProductKey.belongsTo(Order, { as: 'order', foreignKey: 'order_id'})
     }
 }
 

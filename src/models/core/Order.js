@@ -19,8 +19,8 @@ export default class Order extends BaseModel {
 
     static association() {
         //Order.hasMany(OrderProduct, {as: 'productData', foreignKey: 'order_id', hooks: true, onDelete: 'CASCADE', onUpdate : 'NO ACTION'});
-        Order.belongsTo(Distributor, { as: 'distributor', foreignKey: 'distributor_id' })
-        Order.belongsTo(Customer, { as: 'customer', foreignKey: 'userid' })
+        //Order.belongsTo(Distributor, { as: 'distributor', foreignKey: 'distributor_id' })
+        //Order.belongsTo(Customer, { as: 'customer', foreignKey: 'userid' })
         
     }
 }

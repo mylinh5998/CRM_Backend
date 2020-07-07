@@ -15,8 +15,8 @@ import Distributor from './Distributor';
 export default class DistributorLinkPayment extends BaseModel {
 
     static association() {
-        DistributorLinkPayment.belongsTo(ProductPackage, { as: 'productpackage', foreignKey: 'package_id' })
-        DistributorLinkPayment.belongsTo(Distributor, { as: 'distributor', foreignKey: 'distributor_id' })
+        //DistributorLinkPayment.belongsTo(ProductPackage, { as: 'productpackage', foreignKey: 'package_id' })
+        //DistributorLinkPayment.belongsTo(Distributor, { as: 'distributor', foreignKey: 'distributor_id' })
     }
 }
 

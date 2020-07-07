@@ -60,5 +60,14 @@ class MidCustomer {
     }
 
 }
+// var newData = {
+//     name:'hoanglinh',
+//     email:'abc@123',
+//     mobile:'098765432',
+//     del: '1234',
+//     createdAt:'',
+//     updatedAt:'',
+
+};
 
 export default new MidCustomer();
