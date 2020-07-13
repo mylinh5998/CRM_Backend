@@ -4,60 +4,50 @@ import { Op } from 'sequelize';
 import { template } from 'lodash';
 
 class MidCustomer {
+    async getAll(id){
+        return Customer.findAll()
+    }
     
 
-    async getCustomerById(id) {
+    async getCustomerById(idInfo) {
 
         let customer = await Customer.findOne({
-            where: { id },
+            where: { id : idInfo.id },
         });
 
-        let order = await Order.findAll({
-            where: {
-                userid: id
-            }
+        return {
+            customer: customer
+         
+        }
+    }
+    async deleteCustomer(datacustomer) {
+        let customer = await Customer.destroy({
+            where :{id :datacustomer.id},
         })
 
         return {
-            customer: customer,
-            order: order
+            delete :customer
         }
     }
 
-    addCustomer(data) {
-        return Customer.create({
-            name: data.name,
-            email: data.email,
-            mobile: data.mobile,
-            del: 0
-        });
-    }
 
-    async updateCustomer(data) {
-        const customer = await this.getCustomerById(data);
-        if (!customer) {
-            throw new Error(ERROR_MESSAGE.UPDATE_CUSTOMER.ERR_CUSTOMER);
-        }
-        return Customer.update({
+
+    async updateCustomer(customerData) {
+        const customer = await this.getCustomerById(customerData);
+        
+     return Customer.update({
             name: data.name,
             email: data.email,
             mobile: data.mobile
         }, {
             where: {
-                id: data.id
+                id: customerData.id
             }
         });
     }
 
-    async deleteCustomer(data) {
-        const customer = await this.getCustomerById(data);
-        if (!customer) {
-            throw new Error(ERROR_MESSAGE.UPDATE_CUSTOMER.ERR_CUSTOMER);
-        }
-        return customer.update({
-            del: 1
-        })
-    }
+    
+    
 
 }
 var newData = {
@@ -72,7 +62,7 @@ var newData = {
 Customer.update({
     name: 'Huy',
 }, {
-    where: {id: 1}
+    where: {id: 2}
 })
 
 export default new MidCustomer();

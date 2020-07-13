@@ -42,11 +42,11 @@ const attributes = {
         allowNull: true,
         defaultValue: null
     },
-    del: {
-        type: DataTypes.TINYINT(10),
-        allowNull: true,
-        default: 0
-    },
+    // del: {
+    //     type: DataTypes.TINYINT(10),
+    //     allowNull: true,
+    //     default: 0
+    
     createdAt: {
         type: DataTypes.DATE,
         allowNull: true

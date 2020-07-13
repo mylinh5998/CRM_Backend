@@ -5,10 +5,10 @@ import { isAuth } from '../middlewares/auth';
 import CustomerController from '../controllers/CustomerController';
 
 let routerApp = new Router();
-routerApp.get('/request', isAuth, Response(CustomerController.getRequest));
-routerApp.delete('/delete',isAuth,Response(CustomerController.deleteCustomer));
-routerApp.post('/addcustomer',isAuth,Response(CustomerController.addCustomer));
-routerApp.put('/updatecustomer',isAuth,Response(CustomerController.updateCustomer));
-routerApp.get('/getDetail',isAuth,Response(CustomerController.getCustomerById));
-routerApp.get('/getAll',isAuth,Response(CustomerController.GetAll));
+routerApp.get('/request', Response(CustomerController.getRequest));
+routerApp.delete('/delete',Response(CustomerController.deleteCustomer));
+routerApp.post('/addcustomer',Response(CustomerController.addCustomer));
+routerApp.put('/updatecustomer',Response(CustomerController.updateCustomer));
+routerApp.get('/getDetail',Response(CustomerController.getCustomerById));
+routerApp.get('/getAll',Response(CustomerController.getAll));
 export default routerApp;

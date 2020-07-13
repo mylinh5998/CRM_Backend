@@ -1,18 +1,18 @@
 import { MidCustomer, MidUser } from '../models/middle';
 
 class CustomerController {
-    GetAll(req, _res) {
+    getAll(req, _res) {
         let dataQuery = req.query;
 
         return MidCustomer.getAll(dataQuery);
     }
     deleteCustomer(req,_res){
-        const datacustomer = req.body;
+        let datacustomer = req.query;
         return MidCustomer.deleteCustomer(datacustomer);
     }
     getCustomerById(req, res){
 
-        let {idInfo} = req.query;
+        let idInfo = req.query;
 
         return MidCustomer.getCustomerById(idInfo);
 
