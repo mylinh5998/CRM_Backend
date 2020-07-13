@@ -60,14 +60,19 @@ class MidCustomer {
     }
 
 }
-// var newData = {
-//     name:'hoanglinh',
-//     email:'abc@123',
-//     mobile:'098765432',
-//     del: '1234',
-//     createdAt:'',
-//     updatedAt:'',
+var newData = {
+    name:'hoanglinh',
+    email:'abc@123',
+    mobile:'098765432',
+    del: '1234',
+    createdAt:'',
+    updatedAt:'',
 
 };
+Customer.update({
+    name: 'Huy',
+}, {
+    where: {id: 1}
+})
 
 export default new MidCustomer();
