@@ -27,7 +27,7 @@ const attributes = {
         autoIncrement: true
     },
     name: {
-        type: DataTypes.STRING(255),
+        type: DataTypes.STRING(255),// Mua 1 năm, 3 tháng, 6 tháng
         allowNull: true,
         defaultValue: null
     },

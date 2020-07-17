@@ -11,4 +11,5 @@ routerApp.post('/addcustomer',Response(CustomerController.addCustomer));
 routerApp.put('/updatecustomer',Response(CustomerController.updateCustomer));
 routerApp.get('/getDetail',Response(CustomerController.getCustomerById));
 routerApp.get('/getAll',Response(CustomerController.getAll));
+routerApp.get('/search',Response(CustomerController.searchCustomer));
 export default routerApp;

@@ -22,9 +22,9 @@ export {default as OrderProduct} from './OrderProduct';
 
 import { sequelize } from '../../connections';
 
-for (let m in sequelize.models) {
-    sequelize.models[m].sync();
-}
+// for (let m in sequelize.models) {
+//     sequelize.models[m].sync();
+// }
 
 // Init association
 for (let m in sequelize.models) {
