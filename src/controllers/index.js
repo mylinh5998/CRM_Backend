@@ -8,3 +8,4 @@ export { default as PermissionController } from './PermissionController';
 export { default as ProductPackageController } from './ProductPackageController';
 export { default as DistributorLinkPaymentController } from './DistributorLinkPaymentController';
 export { default as CustomerController } from './CustomerController';
+export { default as NotificationController } from './NotificationController';

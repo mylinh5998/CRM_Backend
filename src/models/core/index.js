@@ -19,6 +19,7 @@ export {default as DistributorGem} from './DistributorGem';
 export {default as DistributorLinkPayment} from './DistributorLinkPayment';
 export {default as DistributorKeyFree} from './DistributorKeyFree';
 export {default as OrderProduct} from './OrderProduct';
+export {default as Notification} from './Notification';
 
 import { sequelize } from '../../connections';
 

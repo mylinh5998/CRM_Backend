@@ -8,6 +8,7 @@ import productkey from './productkey';
 import permission from './permission';
 import productpackage from './productpackage';
 import Customer from './customer';
+import notification from './notification';
 
 let routerApp = new Router();
 routerApp.use('/profile', profile);
@@ -19,5 +20,6 @@ routerApp.use('/productkey', productkey);
 routerApp.use('/permission', permission);
 routerApp.use('/productpackage', productpackage);
 routerApp.use('/customer', Customer);
+routerApp.use('/notification', notification);
 
 export default routerApp;

@@ -8,4 +8,4 @@ export { default as MidCustomer } from './MidCustomer';
 export { default as MidProduct } from './MidProduct';
 export { default as MidProductPackage } from './MidProductPackage';
 export { default as MidDistributorLinkPayment } from './MidDistributorLinkPayment';
-
+export { default as MidNotification } from './MidNotification';
