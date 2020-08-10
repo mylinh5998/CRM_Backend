@@ -10,6 +10,7 @@ class MidCustomer {
     
 
     async getCustomerById(idInfo) {
+        
 
         let customer = await Customer.findOne({
             where: { id : idInfo.id },

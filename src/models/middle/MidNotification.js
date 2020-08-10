@@ -10,17 +10,23 @@ class MidNotification{
         }
      }
     async searchID(idInfo){
-        const levelLogin = Distributor.level
-
-        let notification = await Notification.findAll({
-            where: { levelLogin = notification.level}
+        //checklevel
+        //const levelLogin = Distributor.level
+        let levelLogi = await Distributor.findOne({
+            where : {id : idInfo.id},
         })
-        
-        return{
-            notification : notification,
-            levelAdmin : notification.level
-        }
-    }
+        let notification = await Notification.findAll({
+            where: { level : levelLogi.level },
+        });
 
+        return {
+            levelDistributor: levelLogi.level,
+            Notificationn: notification
+         
+        }
+       
+        
+
+    }
 }
  export default new MidNotification();
