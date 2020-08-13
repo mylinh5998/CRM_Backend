@@ -29,4 +29,4 @@ class MidNotification{
 
     }
 }
- export default new MidNotification();
+ export default new MidNotification(); 

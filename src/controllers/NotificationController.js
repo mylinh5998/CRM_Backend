@@ -6,11 +6,15 @@ import { Notification } from '../models/core';
 class NotificationController{
      getNoti(req,res) {
         let dataQuery =req.query;
+        
         return MidNotification.getNoti(dataQuery);
+        
+
     }
     searchID(req,res){
         let idInfo = req.query;
-        return MidNotification.searchID(idInfo)
+        const {UserData} = req;
+        return MidNotification.searchID(UserData.distributor_id)
     }
 
 }
